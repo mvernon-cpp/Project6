@@ -3,22 +3,30 @@ import java.util.Map;
 
 public class Code
 {
-	/** Returns the binary representation of the parsed dest field (string) (3 bits)*/
+	/**
+	 * Returns the binary representation of the parsed dest field (string) (3 bits)
+	 */
 	public static String dest(String mnemonic)
 	{
-		//ex: dest("DM") returns "011"
-		return HashMap_DEST.get(mnemonic);	}
+		// ex: dest("DM") returns "011"
+		return HashMap_DEST.get(mnemonic);
+	}
 
-	/** Returns the binary representation of the parsed comp field (string) (7bits)*/
+	/**
+	 * Returns the binary representation of the parsed comp field (string) (7bits)
+	 */
 	public static String comp(String mnemonic)
 	{
-		//ex: comp("A+1") returns "0110111" or comp("D&M") returns "1000000"
-		return HashMap_COMP.get(mnemonic);	}
-	
-	/** Returns the binary representation of the parsed jump field (string) (3 bits)*/
+		// ex: comp("A+1") returns "0110111" or comp("D&M") returns "1000000"
+		return HashMap_COMP.get(mnemonic);
+	}
+
+	/**
+	 * Returns the binary representation of the parsed jump field (string) (3 bits)
+	 */
 	public static String jump(String mnemonic)
 	{
-		//ex: jump("JNE") returns "101"
+		// ex: jump("JNE") returns "101"
 		return HashMap_JUMP.get(mnemonic);
 	}
 
@@ -40,7 +48,7 @@ public class Code
 	{
 		// According to the language specification:
 		{
-			//a=0
+			// a=0
 			put("0", "0101010");
 			put("1", "0111111");
 			put("-1", "0111010");
@@ -59,7 +67,7 @@ public class Code
 			put("A-D", "0000111");
 			put("D&A", "0000000");
 			put("D|A", "0010101");
-			//a=1
+			// a=1
 			put("M", "1110000");
 			put("!M", "1110001");
 			put("-M", "1110011");

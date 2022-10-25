@@ -9,6 +9,7 @@ public class Parser
 
 	/**
 	 * Constructor / initializer: Creates a Parser and opens the source text file
+	 * 
 	 * @throws IOException
 	 */
 	public Parser(File f) throws IOException
@@ -67,8 +68,11 @@ public class Parser
 		return this.nextLine != null;
 	}
 
-	/** Gets the next instruction and makes it the current instruction (string) 
-	 * @throws IOException*/
+	/**
+	 * Gets the next instruction and makes it the current instruction (string)
+	 * 
+	 * @throws IOException
+	 */
 	public void advance() throws IOException
 	{
 		this.currentLine = this.nextLine;
@@ -188,5 +192,4 @@ public class Parser
 		}
 	}
 
-	
 }
